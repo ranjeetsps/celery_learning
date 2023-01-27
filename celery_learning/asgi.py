@@ -1,5 +1,5 @@
 """
-ASGI config for celery_practice project.
+ASGI config for celery_learning project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'celery_practice.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'celery_learning.settings')
 
 application = get_asgi_application()
