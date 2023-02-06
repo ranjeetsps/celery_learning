@@ -44,5 +44,26 @@ python manage.py migrate django_celery_results
 Step 8 :
 Start worker process
 
-celery -A proj worker -l INFO
+celery -A celery_learning worker -l INFO
+
+<!-- Celery beat -->
+pip install django-celery-beat
+Migrate
+
+Create schedules in db
+Add to settings -
+CELERY_BEAT_SCHEDULER = "django_celery_beat.schedulers.DatabaseScheduler"
+
+Run command in new terminal -> 
+To run celery beat -
+    celery -A proj beat
+
+<!-- To run celery worker  -->
+celery -A celery_learning worker -Q <worker_name>
+
+Q flag for custom worker and l flag for default workers
+
+
+
+
 
