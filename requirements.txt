@@ -2,3 +2,4 @@ django
 celery
 djangorestframework
 mysql-client
+django-celery-beat
